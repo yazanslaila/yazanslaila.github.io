@@ -1,135 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yazan Slaila</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yazan Slaila | Cybersecurity Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-    }
+<style>
+  /* Global Styling */
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #c9f7a6;
+  }
 
-    header {
-      background: #222;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+  a {
+    color: #88ff66;
+    text-decoration: none;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-      opacity: 0.8;
-    }
+  /* Header */
+  header {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #000000, #0a0a0a);
+    border-bottom: 1px solid #0f0;
+  }
 
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+  header h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #00ff66;
+  }
 
-    h2 {
-      border-left: 5px solid #222;
-      padding-left: 10px;
-      margin-top: 40px;
-    }
+  header p {
+    font-size: 20px;
+    opacity: 0.8;
+  }
 
-    .section {
-      margin-top: 20px;
-      line-height: 1.7;
-    }
+  /* Container */
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+  }
 
-    .projects-list li {
-      margin-bottom: 10px;
-    }
+  h2 {
+    color: #00ff88;
+    border-left: 5px solid #00ff66;
+    padding-left: 10px;
+    margin-top: 60px;
+    font-size: 28px;
+  }
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      background: #222;
-      color: white;
-      font-size: 14px;
-      opacity: 0.9;
-    }
+  .section {
+    margin-top: 20px;
+    line-height: 1.7;
+    font-size: 17px;
+  }
 
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
+  /* Cards */
+  .card {
+    background-color: #111;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #003300;
+    transition: 0.3s;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  .card:hover {
+    border-color: #00ff66;
+    transform: translateY(-3px);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #66ff88;
+    border-top: 1px solid #003300;
+  }
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Yazan Slaila</h1>
-    <p>Personal Website • Portfolio • Projects</p>
-  </header>
+<header>
+  <h1>Yazan Slaila</h1>
+  <p>Cybersecurity • Penetration Testing • Red Teaming</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <!-- About Me -->
-    <h2>About Me</h2>
-    <div class="section">
-      <p>
-        Hi! I'm <strong>Yazan Slaila</strong>, and this is my personal website.  
-        I enjoy learning, building websites, exploring technology, and improving my skills every day.
-        This site is where I share things I create and topics I'm interested in.
-      </p>
+  <!-- About Me -->
+  <h2>About Me</h2>
+  <div class="section">
+    <p>
+      I am a cybersecurity professional specializing in penetration testing, red teaming, 
+      and cybersecurity engineering. I hold a B.A. in Networks & Information Security and 
+      I'm currently pursuing an M.Sc. in Cybersecurity at Ca’ Foscari University of Venice.
+    </p>
+    <p>
+      Over the past 2.5 years, I’ve identified high-severity vulnerabilities in organizations 
+      such as Sony, Stanford University, and other private programs. I hold advanced 
+      professional certifications including CPENT and eWPTX, and I am currently preparing for eMAPT.
+    </p>
+  </div>
+
+  <!-- Skills -->
+  <h2>Skills & Expertise</h2>
+  <div class="section">
+    <div class="card">
+      <strong>Penetration Testing:</strong> Web, Internal Network, Active Directory, Red Teaming
+    </div>
+    <div class="card">
+      <strong>Security Tools:</strong> Burp Suite, Kali Linux, Impacket, Bloodhound, Evil-WinRM, Wireshark, Nessus, Metasploit
+    </div>
+    <div class="card">
+      <strong>Programming & Automation:</strong> Scripting & automated security testing frameworks
+    </div>
+    <div class="card">
+      <strong>Teaching & Reporting:</strong> Delivered OWASP Top 10 course, expert in writing penetration testing reports
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <h2>Experience</h2>
+  <div class="section">
+
+    <div class="card">
+      <strong>Research Fellow — Ca’ Foscari University (2025–Present)</strong><br>
+      Conducting research focused on cybersecurity and network security.
     </div>
 
-    <!-- Skills -->
-    <h2>Skills & Interests</h2>
-    <div class="section">
-      <ul>
-        <li>Web development basics (HTML, CSS)</li>
-        <li>Technology & digital tools</li>
-        <li>Cybersecurity fundamentals (ethical and safe learning only)</li>
-        <li>Problem solving & learning new concepts</li>
-      </ul>
+    <div class="card">
+      <strong>Cybersecurity Engineer / Penetration Tester — ZeroOne (2023–Present)</strong><br>
+      Led internal penetration testing projects, specializing in web and AD exploitation, 
+      reporting, and training delivery.
     </div>
 
-    <!-- Projects -->
-    <h2>Projects</h2>
-    <div class="section">
-      <ul class="projects-list">
-        <li><strong>Personal Website</strong> – Hosted with GitHub Pages (this site!)</li>
-        <li><strong>Learning Notes</strong> – A collection of what I'm studying</li>
-        <li><strong>Small Web Experiments</strong> – HTML/CSS practice pages</li>
-      </ul>
+    <div class="card">
+      <strong>Cybersecurity Analyst — Paltel (2022)</strong><br>
+      Red team operations, SOC analysis, CVE research, Microsoft security administration.
     </div>
 
-    <!-- Contact -->
-    <h2>Contact</h2>
-    <div class="section">
-      <p>You can reach me through my GitHub profile:</p>
-      <p>
-        <a href="https://github.com/" target="_blank">My GitHub (add your link)</a>
-      </p>
+    <div class="card">
+      <strong>Cybersecurity Trainee — Palcert (2021)</strong><br>
+      Hands-on cybersecurity fundamentals and practical attack simulation training.
     </div>
 
   </div>
 
-  <footer>
-    © 2025 Yazan Slaila — All rights reserved.
-  </footer>
+  <!-- Certificates -->
+  <h2>Certificates</h2>
+  <div class="section">
+    <ul>
+      <li>eMAPT (in progress)</li>
+      <li>eWPTX</li>
+      <li>C|PENT</li>
+      <li>Microsoft SC-200</li>
+      <li>Microsoft MS-500</li>
+      <li>CCNA</li>
+      <li>API Penetration Testing (APIsec University)</li>
+      <li>Practical Ethical Hacking (TCM Security)</li>
+    </ul>
+  </div>
+
+  <!-- Projects -->
+  <h2>Projects</h2>
+  <div class="section">
+
+    <div class="card">
+      <strong>Automated Web Penetration Testing Framework</strong><br>
+      A system that automates discovery of OWASP Top 10 vulnerabilities and escalates to RCE.
+    </div>
+
+    <div class="card">
+      <strong>CO₂-Aware & Secure BGP Routing</strong><br>
+      Integrated CO₂ metrics into BGP routing using Large Communities.
+    </div>
+
+    <div class="card">
+      <strong>Real-World Attacks & Splunk Forensics</strong><br>
+      Analyzed SQLi, BOF, and DoS attacks with full SIEM investigation.
+    </div>
+
+  </div>
+
+  <!-- Contact -->
+  <h2>Contact</h2>
+  <div class="section">
+    <p>If you want to reach me, you can use one of the links below:</p>
+    <p>
+      <strong>Email:</strong> your-email@example.com<br>
+      <strong>LinkedIn:</strong> <a href="#" target="_blank">Add your LinkedIn URL</a><br>
+      <strong>GitHub:</strong> <a href="#" target="_blank">Add your GitHub URL</a>
+    </p>
+
+    <p style="opacity:0.7; font-size:14px;">
+      (Your real contact details are hidden for safety — you can add them manually.)
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Yazan Slaila — Cybersecurity Portfolio
+</footer>
 
 </body>
 </html>
