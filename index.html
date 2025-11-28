@@ -1,20 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yazan Slaila</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 50px auto;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
     }
-    h1 { color: #333; }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      border-left: 5px solid #222;
+      padding-left: 10px;
+      margin-top: 40px;
+    }
+
+    .section {
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+
+    .projects-list li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #222;
+      color: white;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Welcome to Yazan Slaila’s Website</h1>
-  <p>Hello! My name is Yazan, and this is my personal website hosted on GitHub Pages.</p>
+
+  <header>
+    <h1>Yazan Slaila</h1>
+    <p>Personal Website • Portfolio • Projects</p>
+  </header>
+
+  <div class="container">
+
+    <!-- About Me -->
+    <h2>About Me</h2>
+    <div class="section">
+      <p>
+        Hi! I'm <strong>Yazan Slaila</strong>, and this is my personal website.  
+        I enjoy learning, building websites, exploring technology, and improving my skills every day.
+        This site is where I share things I create and topics I'm interested in.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <h2>Skills & Interests</h2>
+    <div class="section">
+      <ul>
+        <li>Web development basics (HTML, CSS)</li>
+        <li>Technology & digital tools</li>
+        <li>Cybersecurity fundamentals (ethical and safe learning only)</li>
+        <li>Problem solving & learning new concepts</li>
+      </ul>
+    </div>
+
+    <!-- Projects -->
+    <h2>Projects</h2>
+    <div class="section">
+      <ul class="projects-list">
+        <li><strong>Personal Website</strong> – Hosted with GitHub Pages (this site!)</li>
+        <li><strong>Learning Notes</strong> – A collection of what I'm studying</li>
+        <li><strong>Small Web Experiments</strong> – HTML/CSS practice pages</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <h2>Contact</h2>
+    <div class="section">
+      <p>You can reach me through my GitHub profile:</p>
+      <p>
+        <a href="https://github.com/" target="_blank">My GitHub (add your link)</a>
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Yazan Slaila — All rights reserved.
+  </footer>
+
 </body>
 </html>
