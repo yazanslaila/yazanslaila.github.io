@@ -1,216 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yazan Slaila | Cybersecurity Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yazan Slaila - Cybersecurity Engineer, Penetration Tester, and Researcher. Portfolio for BlackHat 2025.">
+    <title>Yazan Slaila | Cybersecurity Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Darker Slate for BlackHat vibe */
+            color: #e2e8f0;
+        }
+        
+        /* Cyber Grid Background */
+        .tech-grid-bg {
+            background-color: transparent;
+            background-image: linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.2;
+        }
 
-<style>
-  /* Global Styling */
-  body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #c9f7a6;
-  }
+        /* Card Styles */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        }
 
-  a {
-    color: #88ff66;
-    text-decoration: none;
-  }
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #60a5fa, #a855f7);
+        }
 
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Header */
-  header {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(180deg, #000000, #0a0a0a);
-    border-bottom: 1px solid #0f0;
-  }
-
-  header h1 {
-    font-size: 48px;
-    margin: 0;
-    color: #00ff66;
-  }
-
-  header p {
-    font-size: 20px;
-    opacity: 0.8;
-  }
-
-  /* Container */
-  .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-  }
-
-  h2 {
-    color: #00ff88;
-    border-left: 5px solid #00ff66;
-    padding-left: 10px;
-    margin-top: 60px;
-    font-size: 28px;
-  }
-
-  .section {
-    margin-top: 20px;
-    line-height: 1.7;
-    font-size: 17px;
-  }
-
-  /* Cards */
-  .card {
-    background-color: #111;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    border: 1px solid #003300;
-    transition: 0.3s;
-  }
-
-  .card:hover {
-    border-color: #00ff66;
-    transform: translateY(-3px);
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #66ff88;
-    border-top: 1px solid #003300;
-  }
-</style>
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
 </head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
 
-<body>
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 text-white fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-8">
+            <a href="#" class="text-2xl font-bold tracking-tighter hover:text-blue-400 transition">
+                Yazan<span class="text-blue-500">.Slaila</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-sm font-medium hover:text-blue-400 transition uppercase tracking-wide">Home</a>
+                <a href="#expertise" class="text-sm font-medium hover:text-blue-400 transition uppercase tracking-wide">Expertise</a>
+                <a href="#projects" class="text-sm font-medium hover:text-blue-400 transition uppercase tracking-wide">Projects</a>
+                <a href="#experience" class="text-sm font-medium hover:text-blue-400 transition uppercase tracking-wide">Experience</a>
+                <a href="#contact" class="text-sm font-bold bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Contact Me</a>
+            </div>
 
-<header>
-  <h1>Yazan Slaila</h1>
-  <p>Cybersecurity • Penetration Testing • Red Teaming</p>
-</header>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
 
-<div class="container">
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-slate-900 z-50 flex flex-col items-center justify-center space-y-8 text-white">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-white hover:text-red-500 transition">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <a href="#home" class="text-3xl font-bold mobile-link">Home</a>
+            <a href="#expertise" class="text-3xl font-bold mobile-link">Expertise</a>
+            <a href="#projects" class="text-3xl font-bold mobile-link">Projects</a>
+            <a href="#experience" class="text-3xl font-bold mobile-link">Experience</a>
+            <a href="#contact" class="text-3xl font-bold text-blue-400 mobile-link">Contact</a>
+        </div>
+    </header>
 
-  <!-- About Me -->
-  <h2>About Me</h2>
-  <div class="section">
-    <p>
-      I am a cybersecurity professional specializing in penetration testing, red teaming, 
-      and cybersecurity engineering. I hold a B.A. in Networks & Information Security and 
-      I'm currently pursuing an M.Sc. in Cybersecurity at Ca’ Foscari University of Venice.
-    </p>
-    <p>
-      Over the past 2.5 years, I’ve identified high-severity vulnerabilities in organizations 
-      such as Sony, Stanford University, and other private programs. I hold advanced 
-      professional certifications including CPENT and eWPTX, and I am currently preparing for eMAPT.
-    </p>
-  </div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 tech-grid-bg"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[100px]"></div>
 
-  <!-- Skills -->
-  <h2>Skills & Expertise</h2>
-  <div class="section">
-    <div class="card">
-      <strong>Penetration Testing:</strong> Web, Internal Network, Active Directory, Red Teaming
-    </div>
-    <div class="card">
-      <strong>Security Tools:</strong> Burp Suite, Kali Linux, Impacket, Bloodhound, Evil-WinRM, Wireshark, Nessus, Metasploit
-    </div>
-    <div class="card">
-      <strong>Programming & Automation:</strong> Scripting & automated security testing frameworks
-    </div>
-    <div class="card">
-      <strong>Teaching & Reporting:</strong> Delivered OWASP Top 10 course, expert in writing penetration testing reports
-    </div>
-  </div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <div class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-300 text-sm font-semibold backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Available for Red Teaming & Consulting
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
+                Cybersecurity Engineer <br>
+                <span class="text-gradient">& Penetration Tester</span>
+            </h1>
+            
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto text-slate-400 font-light leading-relaxed">
+                Specializing in <span class="text-white font-medium">Offensive Security</span>, <span class="text-white font-medium">Red Teaming</span>, and <span class="text-white font-medium">Research</span>. 
+                <br>Currently securing networks at <span class="text-blue-400">Ca' Foscari University</span>.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="bg-blue-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg shadow-blue-600/30 hover:bg-blue-500 hover:-translate-y-1 transition duration-300">
+                    <i class="fas fa-code-branch mr-2"></i> View Projects
+                </a>
+                <a href="https://www.linkedin.com/in/yazanslaila/" target="_blank" class="glass-card text-white font-bold py-4 px-8 rounded-lg hover:bg-white/10 transition duration-300">
+                    <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                </a>
+            </div>
 
-  <!-- Experience -->
-  <h2>Experience</h2>
-  <div class="section">
+            <div class="mt-12 flex justify-center items-center gap-6 text-slate-500 text-sm font-medium uppercase tracking-widest">
+                <span>Vulnerabilities Identified In:</span>
+                <div class="flex gap-4 text-white">
+                    <span class="flex items-center gap-2"><i class="fab fa-sony"></i> Sony</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-university"></i> Stanford</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <strong>Research Fellow — Ca’ Foscari University (2025–Present)</strong><br>
-      Conducting research focused on cybersecurity and network security.
-    </div>
-
-    <div class="card">
-      <strong>Cybersecurity Engineer / Penetration Tester — ZeroOne (2023–Present)</strong><br>
-      Led internal penetration testing projects, specializing in web and AD exploitation, 
-      reporting, and training delivery.
-    </div>
-
-    <div class="card">
-      <strong>Cybersecurity Analyst — Paltel (2022)</strong><br>
-      Red team operations, SOC analysis, CVE research, Microsoft security administration.
-    </div>
-
-    <div class="card">
-      <strong>Cybersecurity Trainee — Palcert (2021)</strong><br>
-      Hands-on cybersecurity fundamentals and practical attack simulation training.
-    </div>
-
-  </div>
-
-  <!-- Certificates -->
-  <h2>Certificates</h2>
-  <div class="section">
-    <ul>
-      <li>eMAPT (in progress)</li>
-      <li>eWPTX</li>
-      <li>C|PENT</li>
-      <li>Microsoft SC-200</li>
-      <li>Microsoft MS-500</li>
-      <li>CCNA</li>
-      <li>API Penetration Testing (APIsec University)</li>
-      <li>Practical Ethical Hacking (TCM Security)</li>
-    </ul>
-  </div>
-
-  <!-- Projects -->
-  <h2>Projects</h2>
-  <div class="section">
-
-    <div class="card">
-      <strong>Automated Web Penetration Testing Framework</strong><br>
-      A system that automates discovery of OWASP Top 10 vulnerabilities and escalates to RCE.
+    <div class="bg-slate-950 border-y border-slate-800 py-6 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-slate-400 font-semibold">
+                <span class="flex items-center gap-2 hover:text-white transition"><i class="fas fa-certificate text-yellow-500"></i> CPENT</span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <span class="flex items-center gap-2 hover:text-white transition"><i class="fas fa-certificate text-red-500"></i> eWPTX</span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <span class="flex items-center gap-2 hover:text-white transition"><i class="fas fa-shield-alt text-blue-500"></i> SC-200</span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <span class="flex items-center gap-2 hover:text-white transition"><i class="fas fa-shield-alt text-blue-500"></i> MS-500</span>
+                <span class="hidden md:inline text-slate-700">|</span>
+                <span class="flex items-center gap-2 hover:text-white transition"><i class="fas fa-network-wired text-green-500"></i> CCNA</span>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <strong>CO₂-Aware & Secure BGP Routing</strong><br>
-      Integrated CO₂ metrics into BGP routing using Large Communities.
-    </div>
+    <section id="expertise" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Technical Arsenal</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-blue-500 mb-4 text-4xl"><i class="fas fa-bug"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Penetration Testing</h3>
+                    <p class="text-slate-400 mb-4">Expertise in identifying high-severity vulnerabilities in web applications and internal infrastructure.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Burp Suite & OWASP Top 10</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Metasploit & Nessus</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>API Security</li>
+                    </ul>
+                </div>
 
-    <div class="card">
-      <strong>Real-World Attacks & Splunk Forensics</strong><br>
-      Analyzed SQLi, BOF, and DoS attacks with full SIEM investigation.
-    </div>
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-red-500 mb-4 text-4xl"><i class="fas fa-user-secret"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Red Teaming & AD</h3>
+                    <p class="text-slate-400 mb-4">Simulating sophisticated attacks on Active Directory environments to test organizational resilience.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Bloodhound & SharpHound</li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Impacket & Evil-Winrm</li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Lateral Movement</li>
+                    </ul>
+                </div>
 
-  </div>
+                <div class="glass-card p-8 rounded-xl">
+                    <div class="text-purple-500 mb-4 text-4xl"><i class="fas fa-flask"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-3">Security Research</h3>
+                    <p class="text-slate-400 mb-4">Academic and practical research focused on network protocols and secure routing architectures.</p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i>BGP Security Extension</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i>CVE Analysis</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i>Splunk Attack Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <h2>Contact</h2>
-  <div class="section">
-    <p>If you want to reach me, you can use one of the links below:</p>
-    <p>
-      <strong>Email:</strong> your-email@example.com<br>
-      <strong>LinkedIn:</strong> <a href="#" target="_blank">Add your LinkedIn URL</a><br>
-      <strong>GitHub:</strong> <a href="#" target="_blank">Add your GitHub URL</a>
-    </p>
+    <section id="projects" class="py-20 bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500 transition group">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition">Automated Pentest Framework</h3>
+                            <i class="fas fa-robot text-slate-600 text-2xl"></i>
+                        </div>
+                        <p class="text-slate-400 mb-6">
+                            A fully automated framework designed to identify OWASP Top 10 vulnerabilities. The system autonomously escalates found vulnerabilities to achieve Remote Code Execution (RCE).
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-blue-300">Python</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-blue-300">Automation</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-blue-300">RCE</span>
+                        </div>
+                    </div>
+                </div>
 
-  </div>
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-green-500 transition group">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-green-400 transition">CO2-Aware BGP Routing</h3>
+                            <i class="fas fa-globe-europe text-slate-600 text-2xl"></i>
+                        </div>
+                        <p class="text-slate-400 mb-6">
+                            Designed and implemented a BGP extension leveraging Large Communities to integrate CO2 emission metrics into routing decisions, enabling environmentally aware and secure inter-domain routing.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-green-300">Networking</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-green-300">BGP</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-green-300">Sustainability</span>
+                        </div>
+                    </div>
+                </div>
 
-</div>
+                <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-red-500 transition group md:col-span-2">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-red-400 transition">Real Attack Analysis with Splunk</h3>
+                            <i class="fas fa-search text-slate-600 text-2xl"></i>
+                        </div>
+                        <p class="text-slate-400 mb-6">
+                            Conducted real-world attack scenarios (SQLi, Buffer Overflow, DoS) on a controlled web server and analyzed the traffic signatures using Splunk to improve Blue Team detection capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-red-300">Splunk</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-red-300">Blue Teaming</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-full text-xs text-red-300">SQLi / BOF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  © 2025 Yazan Slaila — Cybersecurity Portfolio
-</footer>
+    <section id="experience" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Professional Timeline</h2>
+            
+            <div class="relative border-l-2 border-slate-700 ml-4 md:ml-0 space-y-12">
+                
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-slate-900"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-2 md:mb-0 order-1">
+                            <h3 class="text-xl font-bold text-white">Research Fellow</h3>
+                            <div class="text-blue-400 font-medium">Università Ca' Foscari Venezia</div>
+                            <div class="text-sm text-slate-500">June 2025 - Present</div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 order-2">
+                            <p class="text-slate-400">Conducting advanced research in cybersecurity with a focus on network security and contributing to practical academic projects.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-slate-600 rounded-full border-4 border-slate-900"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-2 md:mb-0 order-1">
+                            <h3 class="text-xl font-bold text-white">Cybersecurity Engineer</h3>
+                            <div class="text-blue-400 font-medium">ZeroOne</div>
+                            <div class="text-sm text-slate-500">Apr 2023 - Present</div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 order-2">
+                            <p class="text-slate-400">Led internal penetration testing teams. Executed 10+ full infrastructure pentests. Specialized in Web Apps and Active Directory (Bloodhound, Evil-Winrm). Delivered OWASP Top 10 training.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-0">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 bg-slate-600 rounded-full border-4 border-slate-900"></div>
+                    <div class="md:flex justify-between items-start">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-2 md:mb-0 order-1">
+                            <h3 class="text-xl font-bold text-white">Cybersecurity Analyst</h3>
+                            <div class="text-blue-400 font-medium">Paltel</div>
+                            <div class="text-sm text-slate-500">Apr 2022 - Sep 2022</div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 order-2">
+                            <p class="text-slate-400">Worked in Red/Blue teams. Applied CVEs in testing environments and monitored security via Sentinel SIEM.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-slate-800 border-t border-slate-700">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-8 text-white">Education</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 max-w-sm w-full">
+                    <i class="fas fa-graduation-cap text-3xl text-blue-500 mb-2"></i>
+                    <h3 class="text-lg font-bold text-white">M.Sc. Cybersecurity</h3>
+                    <p class="text-slate-400">Ca' Foscari University of Venice</p>
+                    <p class="text-sm text-slate-500">2024 - 2026</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-lg border border-slate-700 max-w-sm w-full">
+                    <i class="fas fa-university text-3xl text-blue-500 mb-2"></i>
+                    <h3 class="text-lg font-bold text-white">B.A. Networks & Info Sec</h3>
+                    <p class="text-slate-400">An-Najah National University</p>
+                    <p class="text-sm text-slate-500">2019 - 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="relative py-24 text-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900 z-0"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Let's Secure Your Infrastructure</h2>
+            <p class="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
+                Open for collaborations, penetration testing engagements, and security research opportunities.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="mailto:yazan.slaila@hotmail.com" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i> yazan.slaila@hotmail.com
+                </a>
+                <a href="tel:+972595843174" class="text-white border border-white/30 py-3 px-8 rounded-full hover:bg-white/10 transition">
+                    <i class="fas fa-phone mr-2"></i> +972 595 843 174
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 py-8 text-center border-t border-slate-900">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Yazan Slaila. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/yazanslaila/" class="hover:text-blue-400 transition"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const closeMenuBtn = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Smooth Scroll for Anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
